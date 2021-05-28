@@ -117,7 +117,8 @@ class Rest extends AbstractClient implements RestRequester
                 $guzzleParams = $params;
             } else {
                 // Detect type
-                $guzzleParams[strtoupper($type) === 'GET' ? 'query' : 'json'] = $params;
+                $capsType = strtoupper($type);
+                $guzzleParams[($capsType === 'GET' || $capsType === 'DELETE' ) ? 'query' : 'json'] = $params;
             }
         }
 
