@@ -1,5 +1,5 @@
 {
-  "name": "osiset/basic-shopify-api",
+  "name": "anglerfox/basic-shopify-api",
   "type": "library",
   "description": "A basic Shopify API wrapper with REST and GraphQL support, powered by Guzzle.",
   "keywords": ["api", "shopify", "rest", "graphql"],
