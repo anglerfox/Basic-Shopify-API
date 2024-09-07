@@ -109,7 +109,10 @@ class Rest extends AbstractClient implements RestRequester
         $uri = $this->getBaseUri()->withPath($path);
 
         // Build the request parameters for Guzzle
-        $guzzleParams = [];
+        $guzzleParams = [
+            'connect_timeout' => 300,
+            'timeout'         => 300,
+        ];
         if ($params !== null) {
             $keys = array_keys($params);
             if (isset($keys[0]) && in_array($keys[0], ['query', 'json'])) {
